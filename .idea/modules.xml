@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/java-comparable.iml" filepath="$PROJECT_DIR$/java-comparable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-comparator.iml" filepath="$PROJECT_DIR$/java-comparator.iml" />
     </modules>
   </component>
 </project>
