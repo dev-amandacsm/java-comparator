@@ -14,11 +14,7 @@ public class Main {
         list.add(new Product("Notebook", 1200.00));
         list.add(new Product("Tablet", 450.00));
 
-        Collections.sort(list);
-        //para ordenar **objetos** eh preciso implementar
-        //a interface comparable
-        //em tipos primitivos nao eh necessario, pois eles ja
-        //vem com a implementacao
+        list.sort(new MyComparator());
 
         System.out.println("PRODUCT LIST-------------");
 
