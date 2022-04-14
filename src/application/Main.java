@@ -2,10 +2,7 @@ package application;
 
 import entities.Product;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,17 +11,19 @@ public class Main {
         list.add(new Product("Notebook", 1200.00));
         list.add(new Product("Tablet", 450.00));
 
-        list.sort(new MyComparator());
+        //Classe anonima
+        Comparator<Product> comp = new Comparator<Product>() {
+            @Override
+            public int compare(Product p1, Product p2) {
+                return p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
+            }
+        };
+
+        list.sort(comp);
 
         System.out.println("PRODUCT LIST-------------");
 
         for(Product p : list) System.out.println(p);
-
-        List<Integer> myInts = Arrays.asList(5, 1, 3, 8, 2, 4);
-        Collections.sort(myInts);
-
-        System.out.println("\n\nINTEGER LIST-------------");
-        for(Integer i : myInts) System.out.println(i);
 
     }
 }
